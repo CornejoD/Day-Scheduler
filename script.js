@@ -15,13 +15,15 @@ $(function runProgram () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  var 
-
-  allbtns.addEventListener('click', function(event)
+  for (let i = 0; i < allbtns.length; i++)
   {
-    var clickedBtn = event.target;
-    console.log(clickedBtn);
-  });
+    allbtns[i].addEventListener('click', function(){
+      console.log("CLICKED", this.textContent);
+      console.log('Button index:', i);
+    })
+  }
+
+  
 
 
   //
@@ -38,7 +40,7 @@ $(function runProgram () {
   // TODO: Add code to display the current date in the header of the page.
 });
 
-$(document).ready(function()
-{
-  runProgram();
-});
+// $(document).ready(function()
+// {
+//   runProgram();
+// });
